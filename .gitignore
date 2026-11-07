@@ -1,0 +1,20 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables and secrets
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Temporary uploaded images
+static/uploads/*
+
+# System files
+.DS_Store
+Thumbs.db

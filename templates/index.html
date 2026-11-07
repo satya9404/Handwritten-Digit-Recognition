@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Handwritten Digit Recognition</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Handwritten Digit Recognition</h1>
+        <p>AI-powered handwritten digit prediction using CNN</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Upload Section -->
+        <section class="card">
+
+            <h2>Upload Your Digit</h2>
+
+            <p>Upload an image containing a handwritten digit (0–9).</p>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept=".png,.jpg,.jpeg"
+            >
+
+            <div class="preview-container">
+                <img id="preview" alt="Image Preview">
+            </div>
+
+            <button id="uploadPredictBtn">
+                Predict Uploaded Image
+            </button>
+
+        </section>
+
+        <!-- Drawing Section -->
+        <section class="card">
+
+            <h2>Draw Your Digit</h2>
+
+            <p>Draw a digit between 0 and 9.</p>
+
+            <canvas
+                id="drawingCanvas"
+                width="280"
+                height="280">
+            </canvas>
+
+            <div class="button-group">
+
+                <button id="clearBtn" class="secondary">
+                    Clear
+                </button>
+
+                <button id="drawPredictBtn">
+                    Predict Drawing
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Prediction Result -->
+        <section class="card result-card">
+
+            <h2>Prediction Result</h2>
+
+            <div id="result">
+                <p>Your prediction will appear here.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Handwritten Digit Recognition System | CNN + Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
